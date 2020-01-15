@@ -1,0 +1,62 @@
+.Timer {
+	width: 100%;
+	height: 85px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	border-bottom: 1px solid #ddd;
+	margin: 0.5rem 0;
+
+	&--title {
+		color: #ddd;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+	&--progress {
+		height: 12.5%;
+		width: 50%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	&--onoff {
+		color: #ddd;
+
+		&-on {
+			color: #11aa99;
+		}
+
+		&-off {
+			color: #ac7575;
+		}
+	}
+}
+.fas {
+	color: #ddd;
+	font-size: 1.25rem;
+	padding: 0.5rem;
+}
+
+.Timer-primary {
+	width: 100%;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid #ddd;
+
+	&--title-primary {
+		color: #ddd;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+}

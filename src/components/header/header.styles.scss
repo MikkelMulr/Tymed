@@ -1,0 +1,23 @@
+.Header {
+	height: 8%;
+	background-color: #111;
+	color: #fff;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	span {
+		color: #11aa99;
+	}
+
+	h4 {
+		color: #ccc;
+	}
+}

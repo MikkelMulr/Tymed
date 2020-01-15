@@ -1,0 +1,144 @@
+//Mobile (default)
+
+.Login {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	color: #fff;
+
+	a {
+		text-decoration: none;
+		color: #11aa99;
+	}
+
+	&--container {
+		margin-top: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 1rem;
+	}
+
+	&--errormessage {
+		width: 100%;
+		height: 3rem;
+		background-color: none;
+		animation: showMsg 7s linear 0.25s;
+		position: absolute;
+		top: 8%;
+		display: none;
+
+		h4 {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			padding: 0.75rem;
+			animation: showText 7s linear 0.5s;
+			opacity: 0;
+		}
+	}
+
+	&--form {
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&--form input {
+		width: 100%;
+		height: 3rem;
+		outline: none;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		background-color: #222;
+		color: #fff;
+		transition: 0.25s linear 0.2s;
+		font-size: 1.2rem;
+	}
+
+	&--form input:focus {
+		padding-top: 2rem;
+		padding-left: 1rem;
+		height: 4rem;
+	}
+
+	&--form button {
+		outline: none;
+		border: none;
+		padding: 1rem;
+		background-color: #11aa99;
+		color: #fff;
+		width: 7rem;
+		margin-top: 1rem;
+		cursor: pointer;
+	}
+
+	&--register {
+		padding-top: 1rem;
+		font-size: 0.85rem;
+		color: #888;
+	}
+
+	&--register-link {
+		color: #11aa99;
+		cursor: pointer;
+	}
+
+	@keyframes showMsg {
+		0% {
+			background-color: none;
+			color: none;
+		}
+
+		25% {
+			background-color: #aa4646;
+			color: #ccc;
+		}
+
+		85% {
+			background-color: #aa4646;
+			color: #ccc;
+		}
+
+		100% {
+			background-color: none;
+			color: none;
+		}
+	}
+
+	@keyframes showText {
+		0% {
+			opacity: 0;
+			color: none;
+		}
+
+		25% {
+			opacity: 1;
+			color: #ccc;
+		}
+
+		85% {
+			opacity: 1;
+			color: #ccc;
+		}
+
+		100% {
+			opacity: 0;
+			color: none;
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+// Desktop+
+@media (min-width: 1200px) {
+}

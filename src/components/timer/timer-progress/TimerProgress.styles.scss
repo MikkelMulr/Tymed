@@ -1,0 +1,21 @@
+.TimerProgress {
+	height: 100%;
+	width: 300px;
+	color: #ddd;
+
+	h3 {
+		color: #ddd;
+
+		span {
+			color: #11aa99;
+		}
+	}
+
+	h4 {
+		color: #aaa;
+	}
+
+	&--time {
+		color: #11aa99;
+	}
+}

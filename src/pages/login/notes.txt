@@ -1,0 +1,25 @@
+
+
+// SEQUENCE OF SCREEN FLOW
+// 1 - HOME '/'
+// 2 - LOGIN/ REGISTER '/LOGIN'
+// 3 - HOME '/'
+// 4 - DASHBOARD
+// 5 - HOME (ON LOGOUT)
+
+// TIMERS WILL NOT LOAD IN WITHOUT GOING THROUGH PROPER SEQUENCE
+
+TODO and ISSUES
+
+
+
+
+
+
+
+
+
+
+
+
+creatron, adafruit
