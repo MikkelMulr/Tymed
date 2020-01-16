@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './Dashboard.styles.scss';
 import Timer from '../../components/timer/Timer.component';
 import NewTimer from '../../components/timer/new/NewTimer.components';
-// import firebase from './firebase/firebase.utils';
 
 export class Dashboard extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			userTimers: []
+			userTimers: [],
+			addNew: false
 		};
 	}
 
@@ -24,7 +24,6 @@ export class Dashboard extends Component {
 		}
 	}
 
-	// maybe Store timers in local storage and pull in according to user auth
 
 	createUserTimers = () => {
 		if (this.props.userData.timers) {
@@ -47,21 +46,20 @@ export class Dashboard extends Component {
 		}
 	};
 
-	makeNewTimer = () => { };
+	// makeNewTimer = () => { };
+	handleShowNewTimer = () => {
+		this.setState({ addNew: false });
+	}
 
 	render() {
 		return (
 			<div className='Dashboard'>
-
-				{/* Current Timer */}
-
-				{/* List of upcoming Timers */}
-
 				<div className='Dashboard--timers'>
 					<h2>MY DASHBOARD</h2>
 					{this.state.userTimers}</div>
 				<div className='Dashboard--addNew' >
-					<NewTimer />
+					{!this.state.addNew ? <i className="fas fa-plus-circle Dashboard--addNew-btn" onClick={() => this.setState({ addNew: true })}></i> : null}
+					{this.state.addNew ? <NewTimer added={this.handleShowNewTimer} /> : null}
 				</div>
 			</div>
 		);

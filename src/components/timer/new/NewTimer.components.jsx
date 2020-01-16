@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewTimer.style.scss';
 
-function NewTimer() {
+function NewTimer({ added }) {
   return (
     <div className="NewTimer">
       <h2>Create new Timer</h2>
@@ -47,7 +47,7 @@ function NewTimer() {
         </select>
       </div>
 
-      <i className="far fa-check-circle NewTimer--btn"></i>
+      <i className="far fa-check-circle NewTimer--btn" onClick={added}></i>
     </div>
   )
 }
