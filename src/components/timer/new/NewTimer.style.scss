@@ -8,6 +8,7 @@
   align-items: flex-start;
 
   &--time {
+    margin-top: 1rem;
     height: 100%;
     width: 100%;
     display: flex;
@@ -19,6 +20,8 @@
   &--btn {
     font-size: 2rem;
     color: #11aa99;
+    width: 100%;
+    text-align: right;
   }
 
   &--input {

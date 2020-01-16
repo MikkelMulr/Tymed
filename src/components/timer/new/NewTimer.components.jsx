@@ -22,7 +22,7 @@ function NewTimer() {
           <option value="11">11</option>
         </select>
 
-        <select name="min">
+        <select name="min" className="NewTimer--select">
           <option value="0">00</option>
           <option value="5">5</option>
           <option value="10">10</option>
@@ -37,16 +37,15 @@ function NewTimer() {
           <option value="55">55</option>
         </select>
 
-        <select name="ampm">
+        <select name="ampm" className="NewTimer--select">
           <option value="0">am</option>
           <option value="1">pm</option>
         </select>
+        <select name="repeat" className="NewTimer--select">
+          <option value="hourly">hourly</option>
+          <option value="daily">daily</option>
+        </select>
       </div>
-      <select name="repeat">
-        <option value="hourly">hourly</option>
-        <option value="daily">daily</option>
-
-      </select>
 
       <i className="far fa-check-circle NewTimer--btn"></i>
     </div>

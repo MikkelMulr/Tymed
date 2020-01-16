@@ -52,12 +52,14 @@ export class Dashboard extends Component {
 	render() {
 		return (
 			<div className='Dashboard'>
-				<h2>MY DASHBOARD</h2>
 
 				{/* Current Timer */}
 
 				{/* List of upcoming Timers */}
-				<div className='Dashboard--timers'>{this.state.userTimers}</div>
+
+				<div className='Dashboard--timers'>
+					<h2>MY DASHBOARD</h2>
+					{this.state.userTimers}</div>
 				<div className='Dashboard--addNew' >
 					<NewTimer />
 				</div>
