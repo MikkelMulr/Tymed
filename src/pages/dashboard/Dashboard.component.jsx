@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Dashboard.styles.scss';
 import Timer from '../../components/timer/Timer.component';
+import NewTimer from '../../components/timer/new/NewTimer.components';
 // import firebase from './firebase/firebase.utils';
 
 export class Dashboard extends Component {
@@ -46,7 +47,7 @@ export class Dashboard extends Component {
 		}
 	};
 
-	makeNewTimer = () => {};
+	makeNewTimer = () => { };
 
 	render() {
 		return (
@@ -57,7 +58,9 @@ export class Dashboard extends Component {
 
 				{/* List of upcoming Timers */}
 				<div className='Dashboard--timers'>{this.state.userTimers}</div>
-				<div className='Dashboard--addNew' />
+				<div className='Dashboard--addNew' >
+					<NewTimer />
+				</div>
 			</div>
 		);
 	}

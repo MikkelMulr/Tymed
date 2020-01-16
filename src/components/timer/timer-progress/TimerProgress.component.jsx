@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './TimerProgress.styles.scss';
 
 const TimerProgress = ({ repeat, hour, min, ampm, isPrimary }) => {

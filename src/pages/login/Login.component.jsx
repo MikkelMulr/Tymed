@@ -19,10 +19,6 @@ export class Login extends Component {
 		this.getCurrentDBstate();
 	}
 
-	componentWillUnmount() {
-		// this.unsubscribe();
-	}
-
 	getCurrentDBstate = () => {
 		console.log(this.props);
 
@@ -172,7 +168,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Not a member?
 								<span className='Login--register-link'>
-									<a onClick={() => this.setState({ setView: 'register' })}> Register</a>
+									<a href="#" onClick={() => this.setState({ setView: 'register' })}> Register</a>
 								</span>
 							</p>
 						</main>
@@ -240,7 +236,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Already a member?
 								<span className='Login--register-link'>
-									<a onClick={() => this.setState({ setView: 'login' })}> Log in</a>
+									<a href="#" onClick={() => this.setState({ setView: 'login' })}> Log in</a>
 								</span>
 							</p>
 						</main>

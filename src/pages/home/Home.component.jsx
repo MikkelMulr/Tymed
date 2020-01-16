@@ -17,7 +17,7 @@ export class Home extends Component {
 				{this.props.loggedInStatus === 'NOT_LOGGED_IN' ? <Link to='/login'>Log in</Link> : null}
 				{/* <Link to='/login'>Log in</Link> */}
 				<Link to='/dashboard'>Dashboard</Link>
-				<h2>{this.props.loggedInStatus === 'LOGGED_IN' ? `Welcome back ${this.props.userData.name}` : ''}</h2>
+				<h2>{this.props.loggedInStatus === 'LOGGED_IN' ? `Welcome back ${this.props.userData.first_name}` : ''}</h2>
 
 				<header className='Home--head'>
 					{/* <h2 /> */}

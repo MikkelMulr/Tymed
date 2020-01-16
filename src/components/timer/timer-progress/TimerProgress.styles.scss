@@ -3,6 +3,8 @@
 	width: 300px;
 	color: #ddd;
 
+	animation: reveal 0.6s linear;
+
 	h3 {
 		color: #ddd;
 
@@ -17,5 +19,18 @@
 
 	&--time {
 		color: #11aa99;
+	}
+}
+
+
+@keyframes reveal {
+	0% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }

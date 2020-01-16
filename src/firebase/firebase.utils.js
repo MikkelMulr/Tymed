@@ -30,7 +30,7 @@ export const createNewUser = (name, email, password) => {
 
 export const getUsers = () => {
 	let userRef = firebase.firestore().collection('users');
-	let users = [];
+	// let users = [];
 
 	userRef
 		.get()

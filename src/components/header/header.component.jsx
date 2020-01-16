@@ -10,7 +10,7 @@ const Header = ({ user }) => {
 					TY<span>MED</span>
 				</Link>
 			</h2>
-			{user.name ? <Link to='/dashboard'>Timers</Link> : <Link to='/login'>Log in</Link>}
+			{user.first_name ? <Link to='/dashboard'>Timers</Link> : <Link to='/login'>Log in</Link>}
 		</div>
 	);
 };

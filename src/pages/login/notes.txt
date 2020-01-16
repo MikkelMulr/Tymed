@@ -11,15 +11,6 @@
 
 TODO and ISSUES
 
-
-
-
-
-
-
-
-
-
-
-
-creatron, adafruit
+Registration - Issue where after user registers, logging in with new creds does not create custom session unique to user
+               likely to do with data call order.
+               Were they redirected from Home comp after registration this may be avoided (to be tested)
