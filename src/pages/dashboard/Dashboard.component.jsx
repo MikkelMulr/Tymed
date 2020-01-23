@@ -46,7 +46,17 @@ export class Dashboard extends Component {
 		}
 	};
 
-	// makeNewTimer = () => { };
+	makeNewTimer = (name, hour, min, ampm) => {
+		let newTimer = {
+			medName: name,
+			hour: hour,
+			min: min,
+			ampm: ampm
+		};
+
+		return newTimer;
+	}
+
 	handleShowNewTimer = () => {
 		this.setState({ addNew: false });
 	}
@@ -55,7 +65,7 @@ export class Dashboard extends Component {
 		return (
 			<div className='Dashboard'>
 				<div className='Dashboard--timers'>
-					<h2>MY DASHBOARD</h2>
+					<h2>MY TIMERS</h2>
 					{this.state.userTimers}</div>
 				<div className='Dashboard--addNew' >
 					{!this.state.addNew ? <i className="fas fa-plus-circle Dashboard--addNew-btn" onClick={() => this.setState({ addNew: true })}></i> : null}

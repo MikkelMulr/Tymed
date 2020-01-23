@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Timer from '../../components/timer/Timer.component';
+// import Timer from '../../components/timer/Timer.component';
 import './Home.styles.scss';
 
 export class Home extends Component {

@@ -1,13 +1,48 @@
 .Dashboard {
+	width: 100vw;
 	height: 100vh;
 	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
+	&--timers {
+		align-self: center;
+	}
+
+	&--addNew {
+		align-self: center;
+
+	}
+
 	h2 {
 		color: #ddd;
 		font-size: 1rem;
 		margin-bottom: 1rem;
+		padding-left: 1rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.Dashboard {
+		width: 100vw;
+		height: 100vh;
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		// align-items: center;
+
+		&--timers {
+			// max-width: 100%;
+			width: 500px;
+			align-self: center;
+		}
+
+		h2 {
+			color: #ddd;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+		}
 	}
 }

@@ -11,6 +11,12 @@
 
 TODO and ISSUES
 
-Registration - Issue where after user registers, logging in with new creds does not create custom session unique to user
-               likely to do with data call order.
-               Were they redirected from Home comp after registration this may be avoided (to be tested)
+Persistent user sessiosn have not been established yet
+
+Adding timers to user's account has not yet been build in.
+
+
+Adding Timer to User account -> 
+  - Get timer data from from
+  - Pass into make new timer function to format
+  - take returned formatted timer data and append to timer array on DB for specific user
