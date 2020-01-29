@@ -4,8 +4,8 @@ import './EditTimer.style.scss';
 function EditTimer() {
   return (
     <div className="EditTimer">
-      <p>[ON || OFF]</p>
-      <p className="delete">DELETE</p>
+      <i className="fas fa-power-off toggle"><span className="EditTimer--on">ON</span></i>
+      <i className="far fa-trash-alt delete"></i>
     </div>
   )
 }
