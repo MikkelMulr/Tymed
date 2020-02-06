@@ -1,14 +1,19 @@
 .Timer {
-	max-width: 500px;
-	width: 100vw;
+	max-width: 700px;
+	width: 92vw;
 	height: 85px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-start;
-	border-bottom: 1px solid #ddd;
+	// border-bottom: 1px solid #ddd;
 	margin: 0.5rem 0;
 	padding: 1rem;
+	border-radius: 12px;
+	background-color: #1A1A1A;
+	filter: drop-shadow(10px 10px 20px rgba(16, 16, 16, 1)) drop-shadow(-10px -10px 20px rgba(36, 36, 36, 1));
+	box-shadow: inset 15px 15px 25px rgba(16, 16, 16, .5), inset -15px -15px 25px rgba(36, 36, 36, .5), -3px -3px 8px rgba(36, 36, 36, .2);
+	margin-bottom: 1rem;
 
 	&--title {
 		width: 30%;

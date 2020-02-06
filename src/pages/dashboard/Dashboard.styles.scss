@@ -5,6 +5,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	background-color: #1a1a1a;
+	padding-bottom: 1.5rem;
 
 	&--timers {
 		align-self: center;
@@ -36,12 +38,13 @@
 			// max-width: 100%;
 			width: 500px;
 			align-self: center;
+
+			h2 {
+				color: #ddd;
+				font-size: 1.5rem;
+				margin-bottom: 2rem;
+			}
 		}
 
-		h2 {
-			color: #ddd;
-			font-size: 1rem;
-			margin-bottom: 1rem;
-		}
 	}
 }

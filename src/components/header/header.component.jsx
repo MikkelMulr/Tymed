@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.styles.scss';
 
-const Header = ({ user }) => {
+const Header = ({ user, logStatus }) => {
 	return (
 		<div className='Header'>
 			<h2>
@@ -10,7 +10,7 @@ const Header = ({ user }) => {
 					TY<span>MED</span>
 				</Link>
 			</h2>
-			{user.first_name ? <Link to='/dashboard'>Timers</Link> : <Link to='/login'>Log in</Link>}
+			{logStatus === "LOGGED_IN" ? <Link to='/dashboard'>Timers</Link> : <Link to='/login'>Log in</Link>}
 		</div>
 	);
 };

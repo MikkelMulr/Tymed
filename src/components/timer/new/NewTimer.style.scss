@@ -7,6 +7,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+  background-color: #1A1A1A;
+  filter: drop-shadow(10px 10px 20px rgba(16, 16, 16, 1)) drop-shadow(-10px -10px 20px rgba(36, 36, 36, 1));
+  box-shadow: inset 15px 15px 25px rgba(16, 16, 16, .5), inset -15px -15px 25px rgba(36, 36, 36, .5), -3px -3px 8px rgba(36, 36, 36, .2);
+  border-radius: 12px;
 
   &--time {
     margin-top: 1rem;
@@ -32,7 +36,7 @@
     border-top: none;
     border-right: none;
     border-left: none;
-    background-color: #222;
+    background-color: #1A1A1A;
     color: #fff;
     transition: 0.25s linear 0.2s;
     font-size: 1.2rem;
@@ -45,7 +49,7 @@
   }
 
   &--select {
-    background-color: #222;
+    background-color: #1A1A1A;
     color: #11aa99;
     font-size: 1.25rem;
     border: none;

@@ -21,16 +21,20 @@ class App extends Component {
 		this.setState({ loggedInStatus: 'LOGGED_IN' });
 	};
 
+	handleLogOut = () => {
+		this.setState({ loggedInStatus: 'NOT_LOGGED_IN' });
+	}
+
 	render() {
 		return (
 			<div className='App'>
-				<Header user={this.state.currentUserData} />
+				<Header user={this.state.currentUserData} logStatus={this.state.loggedInStatus} />
 				<Switch>
 					<Route
 						exact
 						path='/'
 						render={(props) => (
-							<Home {...props} loggedInStatus={this.state.loggedInStatus} userData={this.state.currentUserData} />
+							<Home {...props} loggedInStatus={this.state.loggedInStatus} userData={this.state.currentUserData} logout={this.handleLogOut} />
 						)}
 						validity={this.state.foundUser}
 					/>
@@ -48,8 +52,8 @@ class App extends Component {
 							this.state.loggedInStatus === 'LOGGED_IN' ? (
 								<Dashboard {...props} userData={this.state.currentUserData} />
 							) : (
-								<Login {...props} getUser={this.getCurrentUserData} setLoginStatus={this.handleLoginStatus} />
-							)}
+									<Login {...props} getUser={this.getCurrentUserData} setLoginStatus={this.handleLoginStatus} />
+								)}
 					/>
 				</Switch>
 			</div>
