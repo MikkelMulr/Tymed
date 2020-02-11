@@ -1,7 +1,7 @@
 import React from 'react';
 import './TimerProgress.styles.scss';
 
-const TimerProgress = ({ repeat, hour, min, ampm, isPrimary }) => {
+const TimerProgress = ({ repeat, hour, min, ampm }) => {
 	return (
 		<div className='TimerProgress'>
 			<h3>

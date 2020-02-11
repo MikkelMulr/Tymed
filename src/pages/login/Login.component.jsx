@@ -21,7 +21,7 @@ export class Login extends Component {
 
 
 	getCurrentDBstate = () => {
-		console.log(this.props);
+		// console.log(this.props);
 
 		this.unsubscribe = firebase.firestore().collection('users').get().then((snapshot) => {
 			if (snapshot.empty) {
@@ -47,7 +47,7 @@ export class Login extends Component {
 			this.setState({ last_name: e.target.value })
 		}
 
-		console.log(this.state);
+		// console.log(this.state);
 	};
 
 	createNewUserProfile = (firstName, lastName, email, password) => {

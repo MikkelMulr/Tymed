@@ -18,6 +18,7 @@ export class Home extends Component {
 		this.setState({ loggedIn: this.props.loggedInStatus });
 	}
 
+	// Extend through sort to newest
 	componentDidMount() {
 		if (this.props.userData.timers) {
 			this.setState({ timer: { h: this.props.userData.timers[0].setFor[0], m: this.props.userData.timers[0].setFor[1], ampm: this.props.userData.timers[0].setFor[2] } });
@@ -55,7 +56,6 @@ export class Home extends Component {
 		}
 	};
 
-
 	makeNewTimer = (name, hour, min, ampm) => {
 		let newTimer = {
 			medName: name,
@@ -74,9 +74,8 @@ export class Home extends Component {
 			<div className='Home'>
 				{this.state.loggedIn ? null : <h2 className="Home--header">TY<span>MED</span></h2>}
 				<div className="Home--linkcontainer">
-
 					{this.props.loggedInStatus === 'NOT_LOGGED_IN' ? <Link to='/login'>GET <span>STARTED</span></Link> : null}
-
+					{/* Tighten up */}
 					{this.props.loggedInStatus === 'LOGGED_IN' ? <h2>{`Welcome back ${this.props.userData.first_name}`}</h2> : ''}
 					{this.props.loggedInStatus === 'LOGGED_IN' ? <p>{this.state.timer.h ? `Next Timer: ${this.state.timer.h}:${this.state.timer.m}${this.state.timer.ampm === 0 ? 'AM' : 'PM'}` : ''}</p> : null}
 					{this.props.loggedInStatus === 'LOGGED_IN' ? <h4 onClick={this.props.logout}>LOG OUT</h4> : null}
@@ -89,8 +88,6 @@ export class Home extends Component {
 							{this.state.userTimers}</div>
 					</div>
 				</div> : null}
-
-
 			</div>
 		);
 
