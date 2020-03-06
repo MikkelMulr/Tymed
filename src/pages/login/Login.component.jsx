@@ -169,7 +169,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Not a member?
 								<span className='Login--register-link'>
-									<a href="#" onClick={() => this.setState({ setView: 'register' })}> Register</a>
+									<div className="loginbtn" href="#" onClick={() => this.setState({ setView: 'register' })}> Register</div>
 								</span>
 							</p>
 						</main>
@@ -237,7 +237,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Already a member?
 								<span className='Login--register-link'>
-									<a href="#" onClick={() => this.setState({ setView: 'login' })}> Log in</a>
+									<div className="loginbtn" href="#" onClick={() => this.setState({ setView: 'login' })}> Log in</div>
 								</span>
 							</p>
 						</main>
