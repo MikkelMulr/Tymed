@@ -1,0 +1,12 @@
+
+
+NOTES:
+
+
+Set user data and timers in localstorage
+
+check if local storage matches with DB data   - - if it does not match update LS with DB data
+create timer elements from LS not DB
+
+
+attempt fetching current list of timers and pushing new timer into array then updating using new array

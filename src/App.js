@@ -10,11 +10,18 @@ class App extends Component {
 	state = {
 		loggedInStatus: 'NOT_LOGGED_IN',
 		currentUserData: {},
-		userData: null
+		userData: null,
+		currentUserID: ''
 	};
 
-	getCurrentUserData = (user) => {
+	getCurrentUserID = (id) => {
+		this.setState({ currentUserID: id });
+	}
+
+	getCurrentUserData = (user, id) => {
 		this.setState({ currentUserData: user });
+		this.setState({ currentUserID: id });
+
 	};
 
 	handleLoginStatus = () => {
@@ -42,7 +49,7 @@ class App extends Component {
 						exact
 						path='/login'
 						render={(props) => (
-							<Login {...props} getUser={this.getCurrentUserData} setLoginStatus={this.handleLoginStatus} />
+							<Login {...props} getUser={this.getCurrentUserData} setLoginStatus={this.handleLoginStatus} getID={this.getCurrentUserID} />
 						)}
 					/>
 					<Route
@@ -50,7 +57,7 @@ class App extends Component {
 						path='/dashboard'
 						render={(props) =>
 							this.state.loggedInStatus === 'LOGGED_IN' ? (
-								<Dashboard {...props} userData={this.state.currentUserData} />
+								<Dashboard {...props} userData={this.state.currentUserData} userID={this.state.currentUserID} />
 							) : (
 									<Login {...props} getUser={this.getCurrentUserData} setLoginStatus={this.handleLoginStatus} />
 								)}

@@ -20,19 +20,24 @@ export class Home extends Component {
 
 	// Extend through sort to newest
 	componentDidMount() {
-		if (this.props.userData.timers) {
-			this.setState({ timer: { h: this.props.userData.timers[0].setFor[0], m: this.props.userData.timers[0].setFor[1], ampm: this.props.userData.timers[0].setFor[2] } });
-		}
+		try {
 
-		if (this.props.userData) {
-			this.createUserTimers();
-		} else {
-			setTimeout(() => {
+			if (this.props.userData.timers) {
+				this.setState({ timer: { h: this.props.userData.timers[0].setFor[0], m: this.props.userData.timers[0].setFor[1], ampm: this.props.userData.timers[0].setFor[2] } });
+			}
+
+			if (this.props.userData) {
 				this.createUserTimers();
-			}, 2000);
-		}
+			} else {
+				setTimeout(() => {
+					this.createUserTimers();
+				}, 2000);
+			}
 
-		this.handleUserSuccessfulLogIn();
+			this.handleUserSuccessfulLogIn();
+		} catch (err) {
+			console.log(err);
+		}
 	}
 
 	createUserTimers = () => {

@@ -4,6 +4,7 @@ import './Login.styles.scss';
 
 export class Login extends Component {
 	state = {
+		uderID: '',
 		email: '',
 		password: '', //encrypt prior to state change
 		password2: '',
@@ -67,7 +68,7 @@ export class Login extends Component {
 		let found = this.state.usersData.filter(
 			(user) => user.data().email.toLowerCase() === this.state.email /* && user.data().password === password */
 		);
-
+		// this.props.getID(found[0].id);
 		return found;
 	}
 
@@ -75,6 +76,8 @@ export class Login extends Component {
 		e.preventDefault();
 		// Verify that user does not alrready exist
 		let foundUser = this.checkForExistingUser();
+		this.props.getID(foundUser[0].id);
+
 		// console.log(foundUser[0].data());
 		try {
 			if (foundUser.length > 0) {
@@ -96,6 +99,7 @@ export class Login extends Component {
 	};
 
 	handleSubmitLogin = (e) => {
+		console.log(this.props)
 		e.preventDefault();
 
 		this.getCurrentDBstate();
@@ -108,7 +112,8 @@ export class Login extends Component {
 				console.log(foundUser[0].data().password);
 				console.log(this.state.password);
 				if (foundUser[0].data().password === this.state.password) {
-					this.props.getUser(foundUser[0].data());
+					// this.props.getID(foundUser[0].id);
+					this.props.getUser(foundUser[0].data(), foundUser[0].id);
 					this.props.setLoginStatus();
 					this.props.history.push('/');
 				} else {
@@ -169,7 +174,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Not a member?
 								<span className='Login--register-link'>
-									<div className="loginbtn" href="#" onClick={() => this.setState({ setView: 'register' })}> Register</div>
+									<span className="loginbtn" href="#" onClick={() => this.setState({ setView: 'register' })}> Register</span>
 								</span>
 							</p>
 						</main>
@@ -237,7 +242,7 @@ export class Login extends Component {
 							<p className='Login--register'>
 								Already a member?
 								<span className='Login--register-link'>
-									<div className="loginbtn" href="#" onClick={() => this.setState({ setView: 'login' })}> Log in</div>
+									<span className="loginbtn" href="#" onClick={() => this.setState({ setView: 'login' })}> Log in</span>
 								</span>
 							</p>
 						</main>

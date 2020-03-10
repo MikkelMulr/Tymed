@@ -28,6 +28,17 @@ export const createNewUser = (name, email, password) => {
 	});
 };
 
+export const updateUserTimer = (id, name, hour, min, ampm) => {
+	console.log(id);
+	firebase.firestore().collection("users").doc(id).update({
+		"timers": {
+			"medication": name,
+			"repeat": false,
+			"setFor": [hour, min, ampm]
+		}
+	});
+}
+
 export const getUsers = () => {
 	let userRef = firebase.firestore().collection('users');
 	// let users = [];
